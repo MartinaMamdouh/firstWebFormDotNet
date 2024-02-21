@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="home.master.cs" Inherits="emptyWebForm.home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>           
+            <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Size="X-Large" Font-Strikeout="False"  Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/EmployeeWebForm.aspx" Text="Employees" Value="Employees"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/departmentForm.aspx" Text="Departments" Value="Departments"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/SectorForm.aspx" Text="Sectors" Value="Sectors"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/ProjectForm.aspx" Text="Project" Value="Project"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/PrjDepEmpForm.aspx" Text="All" Value="All"></asp:MenuItem>
+                </Items>
+                <StaticMenuStyle HorizontalPadding="20px" />
+            </asp:Menu>  
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
